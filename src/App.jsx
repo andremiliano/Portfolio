@@ -400,7 +400,7 @@ function App() {
                   Hello! My name is Andre and I'm a software engineer based in the UK. My journey in tech began with a curiosity for how things work behind the screen, which quickly evolved into a passion for mobile development and software architecture.
                 </p>
                 <p>
-                  Recently, I've expanded my expertise beyond native iOS. While I continue to build robust apps at <span className="text-primary">Calvium</span>, I've spent the past year architecting full-stack web solutions for <span className="text-primary">Rolls-Royce</span> using <strong>Nuxt, Vue, and Postgres</strong>. I also help clients bring ideas to life on both iOS and Android using <strong>React Native, Expo, and NativeWind</strong>.
+                  Recently, I've expanded my expertise beyond native iOS. As a key member of the team at <span className="text-primary">Calvium</span>, I've spent the past year architecting full-stack web solutions for major clients like <span className="text-primary">Rolls-Royce</span> using <strong>Nuxt, Vue, and Postgres</strong>. I also help clients bring ideas to life on both iOS and Android using <strong>React Native, Expo, and NativeWind</strong>.
                 </p>
                 <p>
                   Here are a few technologies I've been working with recently:
