@@ -40,6 +40,34 @@ const staggerContainer = {
   }
 };
 
+// Tooltip Component
+const Tooltip = ({ children, text }) => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  return (
+    <div 
+      className="relative flex items-center justify-center"
+      onMouseEnter={() => setIsVisible(true)}
+      onMouseLeave={() => setIsVisible(false)}
+    >
+      {children}
+      <AnimatePresence>
+        {isVisible && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: -35 }}
+            exit={{ opacity: 0, y: 10 }}
+            className="absolute px-2 py-1 bg-slate-700 text-slate-200 text-xs rounded font-mono whitespace-nowrap z-50 pointer-events-none"
+          >
+            {text}
+            <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-slate-700"></div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -202,7 +230,7 @@ function App() {
             className="text-2xl font-bold font-mono text-slate-100 cursor-pointer"
             onClick={scrollToTop}
           >
-            André Emiliano<span className="text-primary">Portfolio</span>
+            André Emiliano<span className="text-primary"> Portfolio</span>
           </motion.div>
 
           {/* Desktop Menu */}
@@ -300,14 +328,23 @@ function App() {
               <motion.p variants={fadeInUp} className="text-lg text-slate-400 max-w-lg mb-10 leading-relaxed">
                 I'm a software engineer specializing in native iOS, cross-platform mobile (React Native), and full-stack web solutions. Currently delivering high-impact solutions for clients like Rolls-Royce with Calvium.
               </motion.p>
-              <motion.div variants={fadeInUp} className="flex gap-4">
+              <motion.div variants={fadeInUp} className="flex gap-4 items-center">
                 <ScrollLink to="projects" smooth={true} offset={-100} className="border-2 border-primary text-primary px-6 py-3 rounded font-mono hover:bg-primary/10 transition-colors cursor-pointer">
                   Check out my work
                 </ScrollLink>
                 <div className="flex gap-4 items-center ml-4">
-                   <a href="https://github.coventry.ac.uk/novaisea" target="_blank" className="text-slate-400 hover:text-primary transition-colors"><Github /></a>
-                   <a href="https://www.linkedin.com/in/andremiliano/" target="_blank" className="text-slate-400 hover:text-primary transition-colors"><Linkedin /></a>
-                   <a href="mailto:andre.novais.emiliano@gmail.com" className="text-slate-400 hover:text-primary transition-colors"><Mail /></a>
+                   <Tooltip text="GitHub">
+                     <a href="https://github.com/andremiliano" target="_blank" className="text-slate-400 hover:text-primary transition-colors"><Github /></a>
+                   </Tooltip>
+                   <Tooltip text="LinkedIn">
+                     <a href="https://www.linkedin.com/in/andremiliano/" target="_blank" className="text-slate-400 hover:text-primary transition-colors"><Linkedin /></a>
+                   </Tooltip>
+                   <Tooltip text="Email">
+                     <a href="mailto:andre.novais.emiliano@gmail.com" className="text-slate-400 hover:text-primary transition-colors"><Mail /></a>
+                   </Tooltip>
+                   <Tooltip text="Resume">
+                     <a href="https://drive.google.com/file/d/1Sl-6r-nIzObdi1ZcjgsTxKGC5tVPHlJl/view?usp=sharing" target="_blank" className="text-slate-400 hover:text-primary transition-colors"><FileText /></a>
+                   </Tooltip>
                 </div>
               </motion.div>
             </motion.div>
@@ -489,7 +526,7 @@ function App() {
             <p className="text-primary font-mono mb-4">04. What's Next?</p>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-100 mb-6">Get In Touch</h2>
             <p className="text-slate-400 text-lg mb-12">
-              I'm currently looking for new opportunities. Whether you have a question or just want to say hi, my inbox is always open!
+              Always open for new opportunities. Whether you have a question or just want to say hi, my inbox is always open!
             </p>
             <a href="mailto:andre.novais.emiliano@gmail.com" className="inline-block border border-primary text-primary px-8 py-4 rounded font-mono hover:bg-primary/10 transition-colors">
               Say Hello
