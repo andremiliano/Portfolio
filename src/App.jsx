@@ -19,7 +19,9 @@ import {
   Brain,
   BarChart,
   MessageSquare,
-  ShoppingCart
+  ShoppingCart,
+  Layers,
+  Monitor
 } from 'lucide-react';
 
 // Animation variants
@@ -74,6 +76,20 @@ function App() {
   ];
 
   const projectsData = [
+    {
+      title: "Enterprise Solutions for Rolls-Royce",
+      desc: "Architected full-stack dashboard and management solutions using modern web technologies, delivering robust internal tools for complex data analysis and visualization.",
+      tech: ["Vue.js", "Nuxt", "PostgreSQL", "Tailwind"],
+      link: null,
+      icon: <Globe size={40} strokeWidth={1.5} />
+    },
+    {
+      title: "Cross-Platform Client Apps",
+      desc: "Building performant, scalable mobile applications for various clients on both iOS and Android using the React Native and Expo.",
+      tech: ["React Native", "Expo", "NativeWind"],
+      link: null,
+      icon: <Smartphone size={40} strokeWidth={1.5} />
+    },
     {
       title: "Met Office Weather",
       desc: "Contributed to a government weather app used by 3+ million people, building complex SwiftUI views with WCAG-compliant accessibility.",
@@ -172,7 +188,7 @@ function App() {
             className="text-2xl font-bold font-mono text-slate-100 cursor-pointer"
             onClick={scrollToTop}
           >
-            Andre<span className="text-primary">.dev</span>
+            André Emiliano<span className="text-primary">Portfolio</span>
           </motion.div>
 
           {/* Desktop Menu */}
@@ -260,15 +276,15 @@ function App() {
               variants={staggerContainer}
               className="max-w-3xl"
             >
-              <motion.p variants={fadeInUp} className="font-mono text-primary mb-4">Hi, my name is</motion.p>
+              <motion.p variants={fadeInUp} className="font-mono text-primary mb-4">Hello, my name is</motion.p>
               <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-bold text-slate-100 mb-4">
-                Andre Emiliano.
+                André
               </motion.h1>
               <motion.h2 variants={fadeInUp} className="text-4xl md:text-6xl font-bold text-slate-400 mb-6">
                 I build <span className="gradient-text">digital experiences.</span>
               </motion.h2>
               <motion.p variants={fadeInUp} className="text-lg text-slate-400 max-w-lg mb-10 leading-relaxed">
-                I'm a software engineer specializing in building accessible, human-centered products. Currently focused on iOS and mobile innovation at Calvium.
+                I'm a software engineer specializing in native iOS, cross-platform mobile (React Native), and full-stack web solutions. Currently delivering high-impact solutions for clients like Rolls-Royce and Calvium.
               </motion.p>
               <motion.div variants={fadeInUp} className="flex gap-4">
                 <ScrollLink to="projects" smooth={true} offset={-100} className="border-2 border-primary text-primary px-6 py-3 rounded font-mono hover:bg-primary/10 transition-colors cursor-pointer">
@@ -336,18 +352,18 @@ function App() {
                   Hello! My name is Andre and I'm a software engineer based in the UK. My journey in tech began with a curiosity for how things work behind the screen, which quickly evolved into a passion for mobile development and software architecture.
                 </p>
                 <p>
-                  Today, I have the privilege of working at <span className="text-primary">Calvium</span>, where I contribute to high-impact projects like the Met Office weather app used by millions. My expertise lies in building robust, accessible iOS applications using Swift (UIKit & SwiftUI), ensuring that digital experiences are inclusive for everyone.
+                  Recently, I've expanded my expertise beyond native iOS. While I continue to build robust apps at <span className="text-primary">Calvium</span>, I've spent the past year architecting full-stack web solutions for <span className="text-primary">Rolls-Royce</span> using <strong>Nuxt, Vue, and Postgres</strong>. I also help clients bring ideas to life on both iOS and Android using <strong>React Native, Expo, and NativeWind</strong>.
                 </p>
                 <p>
                   Here are a few technologies I've been working with recently:
                 </p>
                 <ul className="grid grid-cols-2 gap-2 font-mono text-sm mt-4">
                    <li className="flex items-center gap-2"><span className="text-primary">▹</span> Swift (UIKit/SwiftUI)</li>
-                   <li className="flex items-center gap-2"><span className="text-primary">▹</span> React Native</li>
+                   <li className="flex items-center gap-2"><span className="text-primary">▹</span> React Native / Expo</li>
+                   <li className="flex items-center gap-2"><span className="text-primary">▹</span> Vue.js / Nuxt</li>
+                   <li className="flex items-center gap-2"><span className="text-primary">▹</span> PostgreSQL</li>
+                   <li className="flex items-center gap-2"><span className="text-primary">▹</span> Tailwind / NativeWind</li>
                    <li className="flex items-center gap-2"><span className="text-primary">▹</span> Python (ML)</li>
-                   <li className="flex items-center gap-2"><span className="text-primary">▹</span> Firebase</li>
-                   <li className="flex items-center gap-2"><span className="text-primary">▹</span> SQL / CoreData</li>
-                   <li className="flex items-center gap-2"><span className="text-primary">▹</span> Fastlane</li>
                 </ul>
               </div>
               <div className="relative group">
@@ -376,10 +392,10 @@ function App() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { icon: <Smartphone className="w-8 h-8" />, title: "Mobile Dev", text: "Swift, SwiftUI, UIKit, React Native" },
-                { icon: <Database className="w-8 h-8" />, title: "Data & ML", text: "Python (Anaconda), CoreData, Firebase" },
-                { icon: <Terminal className="w-8 h-8" />, title: "DevOps", text: "CI/CD, Fastlane, Bitrise, Jenkins" },
-                { icon: <Code2 className="w-8 h-8" />, title: "Backend", text: "Flask, SQL, REST APIs" }
+                { icon: <Smartphone className="w-8 h-8" />, title: "Mobile Dev", text: "Swift, SwiftUI, React Native, Expo" },
+                { icon: <Monitor className="w-8 h-8" />, title: "Full Stack Web", text: "Vue.js, Nuxt, Tailwind, HTML/CSS" },
+                { icon: <Database className="w-8 h-8" />, title: "Backend & DB", text: "PostgreSQL, Flask, Firebase, SQL" },
+                { icon: <Terminal className="w-8 h-8" />, title: "DevOps", text: "CI/CD, Fastlane, Bitrise, Jenkins" }
               ].map((skill, i) => (
                 <motion.div 
                   key={i}
