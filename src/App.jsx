@@ -298,7 +298,7 @@ function App() {
                 I build <span className="gradient-text">digital experiences.</span>
               </motion.h2>
               <motion.p variants={fadeInUp} className="text-lg text-slate-400 max-w-lg mb-10 leading-relaxed">
-                I'm a software engineer specializing in native iOS, cross-platform mobile (React Native), and full-stack web solutions. Currently delivering high-impact solutions for clients like Rolls-Royce and Calvium.
+                I'm a software engineer specializing in native iOS, cross-platform mobile (React Native), and full-stack web solutions. Currently delivering high-impact solutions for clients like Rolls-Royce with Calvium.
               </motion.p>
               <motion.div variants={fadeInUp} className="flex gap-4">
                 <ScrollLink to="projects" smooth={true} offset={-100} className="border-2 border-primary text-primary px-6 py-3 rounded font-mono hover:bg-primary/10 transition-colors cursor-pointer">
@@ -330,15 +330,12 @@ function App() {
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 </div>
                 <div className="text-slate-300">
-                  <p><span className="text-purple-400">struct</span> <span className="text-yellow-300">Developer</span>: <span className="text-purple-400">View</span> {`{`}</p>
-                  <p className="pl-4"><span className="text-purple-400">var</span> body: <span className="text-purple-400">some</span> View {`{`}</p>
-                  <p className="pl-8"><span className="text-blue-400">VStack</span> {`{`}</p>
-                  <p className="pl-12"><span className="text-blue-400">Text</span>(<span className="text-green-300">"Hello, World!"</span>)</p>
-                  <p className="pl-12"><span className="text-blue-400">Code</span>(<span className="text-green-300">"SwiftUI"</span>)</p>
-                  <p className="pl-12"><span className="text-blue-400">Design</span>(<span className="text-green-300">"Accessible"</span>)</p>
-                  <p className="pl-8">{`}`}</p>
-                  <p className="pl-4">{`}`}</p>
-                  <p>{`}`}</p>
+                  <p><span className="text-purple-400">const</span> <span className="text-yellow-300">developer</span> = {`{`}</p>
+                  <p className="pl-4">mobile: [<span className="text-green-300">"Swift"</span>, <span className="text-green-300">"React Native"</span>],</p>
+                  <p className="pl-4">web: [<span className="text-green-300">"Vue"</span>, <span className="text-green-300">"Nuxt"</span>, <span className="text-green-300">"Tailwind"</span>],</p>
+                  <p className="pl-4">backend: [<span className="text-green-300">"PostgreSQL"</span>, <span className="text-green-300">"Drizzle"</span>],</p>
+                  <p className="pl-4">focus: <span className="text-green-300">"User Experience"</span></p>
+                  <p>{`}`};</p>
                 </div>
               </motion.div>
               {/* Decorative Elements */}
