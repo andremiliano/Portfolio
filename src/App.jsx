@@ -79,7 +79,7 @@ function App() {
     {
       title: "Enterprise Solutions for Rolls-Royce",
       desc: "Architected full-stack dashboard and management solutions using modern web technologies, delivering robust internal tools for complex data analysis and visualization.",
-      tech: ["Vue.js", "Nuxt", "PostgreSQL", "Tailwind"],
+      tech: ["Vue", "Nuxt", "PostgreSQL", "Typescript", "Tailwind"],
       link: null,
       icon: <Globe size={40} strokeWidth={1.5} />
     },
@@ -372,12 +372,11 @@ function App() {
                   Here are a few technologies I've been working with recently:
                 </p>
                 <ul className="grid grid-cols-2 gap-2 font-mono text-sm mt-4">
-                   <li className="flex items-center gap-2"><span className="text-primary">▹</span> Swift (UIKit/SwiftUI)</li>
                    <li className="flex items-center gap-2"><span className="text-primary">▹</span> React Native / Expo</li>
-                   <li className="flex items-center gap-2"><span className="text-primary">▹</span> Vue.js / Nuxt</li>
+                   <li className="flex items-center gap-2"><span className="text-primary">▹</span> Vue / Nuxt</li>
                    <li className="flex items-center gap-2"><span className="text-primary">▹</span> PostgreSQL</li>
                    <li className="flex items-center gap-2"><span className="text-primary">▹</span> Tailwind / NativeWind</li>
-                   <li className="flex items-center gap-2"><span className="text-primary">▹</span> Python (ML)</li>
+                   <li className="flex items-center gap-2"><span className="text-primary">▹</span> Drizzle ORM</li>
                 </ul>
               </div>
               <div className="relative group">
@@ -406,8 +405,8 @@ function App() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { icon: <Smartphone className="w-8 h-8" />, title: "Mobile Dev", text: "Swift, SwiftUI, React Native, Expo" },
-                { icon: <Monitor className="w-8 h-8" />, title: "Full Stack Web", text: "Vue.js, Nuxt, Tailwind, HTML/CSS" },
+                { icon: <Smartphone className="w-8 h-8" />, title: "Mobile Dev", text: "Swift, SwiftUI, UIKit, React Native, Expo" },
+                { icon: <Monitor className="w-8 h-8" />, title: "Full Stack Web", text: "Vue, Nuxt, Typescript, Tailwind, HTML/CSS" },
                 { icon: <Database className="w-8 h-8" />, title: "Backend & DB", text: "PostgreSQL, Firebase, Supabase, SQL" },
                 { icon: <Terminal className="w-8 h-8" />, title: "DevOps", text: "CI/CD, Fastlane, Bitrise, Jenkins" }
               ].map((skill, i) => (
