@@ -105,6 +105,20 @@ function App() {
       icon: <Smartphone size={40} strokeWidth={1.5} />
     },
     {
+      title: "Iceland Bonus Card",
+      desc: "Worked on features and bugs related to Scan and Go functionality, enhancing the in-store shopping experience for users.",
+      tech: ["UIKit", "MVVM", "CMS"],
+      link: "https://apps.apple.com/gb/app/iceland-bonus-card/id1545925055",
+      icon: <Smartphone size={40} strokeWidth={1.5} />
+    },
+    {
+      title: "American Golf",
+      desc: "Implemented custom fittings booking system for golf clubs and enhanced the account menu and Product Detail Pages (PDP).",
+      tech: ["UIKit", "MVVM", "CMS"],
+      link: "https://apps.apple.com/gb/app/american-golf/id1471355600",
+      icon: <Smartphone size={40} strokeWidth={1.5} />
+    },
+    {
       title: "Secure Online System",
       desc: "Flask API for an aircraft service company, developed and tested around security with various Web security aspects.",
       tech: ["Flask", "SQLAlchemy", "Security"],
@@ -394,7 +408,7 @@ function App() {
               {[
                 { icon: <Smartphone className="w-8 h-8" />, title: "Mobile Dev", text: "Swift, SwiftUI, React Native, Expo" },
                 { icon: <Monitor className="w-8 h-8" />, title: "Full Stack Web", text: "Vue.js, Nuxt, Tailwind, HTML/CSS" },
-                { icon: <Database className="w-8 h-8" />, title: "Backend & DB", text: "PostgreSQL, Flask, Firebase, SQL" },
+                { icon: <Database className="w-8 h-8" />, title: "Backend & DB", text: "PostgreSQL, Firebase, Supabase, SQL" },
                 { icon: <Terminal className="w-8 h-8" />, title: "DevOps", text: "CI/CD, Fastlane, Bitrise, Jenkins" }
               ].map((skill, i) => (
                 <motion.div 
