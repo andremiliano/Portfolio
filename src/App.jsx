@@ -258,7 +258,7 @@ function App() {
             <motion.a 
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              href="https://drive.google.com/file/d/1Sl-6r-nIzObdi1ZcjgsTxKGC5tVPHlJl/view?usp=sharing" 
+              href="https://drive.google.com/file/d/1r0V_o4rNwFtaP_rZ7vdgI2uDxcu6_BdM/view?usp=sharing" 
               target="_blank"
               className="border border-primary text-primary px-4 py-2 rounded text-sm font-mono hover:bg-primary/10 transition-colors"
             >
@@ -343,7 +343,7 @@ function App() {
                      <a href="mailto:andre.novais.emiliano@gmail.com" className="text-slate-400 hover:text-primary transition-colors"><Mail /></a>
                    </Tooltip>
                    <Tooltip text="Resume">
-                     <a href="https://drive.google.com/file/d/1Sl-6r-nIzObdi1ZcjgsTxKGC5tVPHlJl/view?usp=sharing" target="_blank" className="text-slate-400 hover:text-primary transition-colors"><FileText /></a>
+                     <a href="https://drive.google.com/file/d/1r0V_o4rNwFtaP_rZ7vdgI2uDxcu6_BdM/view?usp=sharing" target="_blank" className="text-slate-400 hover:text-primary transition-colors"><FileText /></a>
                    </Tooltip>
                 </div>
               </motion.div>
