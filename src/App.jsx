@@ -342,7 +342,7 @@ function App() {
                    <Tooltip text="Email">
                      <a href="mailto:andre.novais.emiliano@gmail.com" className="text-slate-400 hover:text-primary transition-colors"><Mail /></a>
                    </Tooltip>
-                   <Tooltip text="Resume">
+                   <Tooltip text="CV">
                      <a href="https://drive.google.com/file/d/1r0V_o4rNwFtaP_rZ7vdgI2uDxcu6_BdM/view?usp=sharing" target="_blank" className="text-slate-400 hover:text-primary transition-colors"><FileText /></a>
                    </Tooltip>
                 </div>
