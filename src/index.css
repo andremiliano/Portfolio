@@ -2,28 +2,156 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ---------- Base ---------- */
+
+html {
+  scrollbar-color: #2a2d33 #0a0b0d;
+}
+
+body {
+  @apply bg-ink text-bone font-sans;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  @apply bg-accent text-ink;
+}
+
+:focus-visible {
+  outline: 2px solid #ccf425;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
-
 ::-webkit-scrollbar-track {
-  @apply bg-dark;
+  background: #0a0b0d;
 }
-
 ::-webkit-scrollbar-thumb {
-  @apply bg-slate-700 rounded-full border-[3px] border-dark;
+  background: #2a2d33;
+  border-radius: 9999px;
+  border: 3px solid #0a0b0d;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-primary;
+  background: #ccf425;
 }
 
-.glass-card {
-  @apply bg-glass backdrop-blur-md border border-glassBorder shadow-xl;
+/* Hide native cursor when custom cursor active (fine pointers only) */
+html.has-cursor,
+html.has-cursor a,
+html.has-cursor button {
+  cursor: none;
 }
 
-.gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+/* ---------- Atmosphere ---------- */
+
+/* Blueprint grid backdrop */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(237, 237, 230, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(237, 237, 230, 0.035) 1px, transparent 1px);
+  background-size: 72px 72px;
+  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 40%, transparent 100%);
 }
 
+/* Film grain */
+.noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+}
+
+/* Outlined display text */
+.text-stroke {
+  -webkit-text-stroke: 1.5px #ccf425;
+  color: transparent;
+}
+@media (min-width: 768px) {
+  .text-stroke {
+    -webkit-text-stroke: 2px #ccf425;
+  }
+}
+
+/* ---------- Components ---------- */
+
+.hairline {
+  @apply border border-line;
+}
+
+.panel-card {
+  @apply bg-panel border border-line relative;
+}
+
+/* Mouse-tracking spotlight */
+.spotlight {
+  position: relative;
+  overflow: hidden;
+}
+.spotlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    420px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(204, 244, 37, 0.08),
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+.spotlight:hover::before {
+  opacity: 1;
+}
+
+/* Corner ticks (engineering registration marks) */
+.ticks::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(#ccf425, #ccf425) top left / 12px 1.5px,
+    linear-gradient(#ccf425, #ccf425) top left / 1.5px 12px,
+    linear-gradient(#ccf425, #ccf425) top right / 12px 1.5px,
+    linear-gradient(#ccf425, #ccf425) top right / 1.5px 12px,
+    linear-gradient(#ccf425, #ccf425) bottom left / 12px 1.5px,
+    linear-gradient(#ccf425, #ccf425) bottom left / 1.5px 12px,
+    linear-gradient(#ccf425, #ccf425) bottom right / 12px 1.5px,
+    linear-gradient(#ccf425, #ccf425) bottom right / 1.5px 12px;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.ticks:hover::after {
+  opacity: 0.9;
+}
+
+/* Marquee */
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent);
+}
+.marquee-track {
+  will-change: transform;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ---------- Accessibility ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

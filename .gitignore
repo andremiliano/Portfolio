@@ -127,3 +127,6 @@ dist-ssr
 # Local backups
 legacy_backup/
 
+
+# Claude Code local config
+.claude/
