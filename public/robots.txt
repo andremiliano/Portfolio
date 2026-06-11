@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://andremiliano.dev/sitemap.xml
+Sitemap: https://andre-emiliano.netlify.app/sitemap.xml
