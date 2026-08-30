@@ -1,0 +1,36 @@
+# André Emiliano
+
+> Senior Developer based in the United Kingdom, available for remote work.
+> Builds native iOS, cross-platform mobile and full-stack web software.
+
+Currently a Senior Developer at Calvium (since January 2024, remote), where he
+ships SwiftUI features for the Met Office Weather app used by over 3 million
+people, architects React Native applications for regulated healthcare
+environments, and builds Nuxt, PrimeVue and TypeScript internal tooling for Rolls-Royce.
+
+Founder and lead developer of FryAI (https://www.fryai.app), an LLM-powered
+air fryer cooking assistant built in React Native and Expo, taken solo from
+wireframes to the App Store.
+
+Previously an iOS Developer at VML Enterprise Solutions (formerly NN4M) from
+April 2022 to January 2024, shipping features across the River Island,
+American Golf and Iceland Bonus Card retail iOS apps.
+
+Education: MSc Software Development (Distinction) and BSc Computer Science
+(First-Class Honours), both Coventry University.
+
+Core skills: Swift, SwiftUI, UIKit, React Native, Expo, TypeScript, Vue, Nuxt,
+PrimeVue, Tailwind, PostgreSQL, Firebase, Supabase, LLM integration, prompt
+engineering, Playwright (end-to-end testing), Bun and Bun's test runner,
+Cypress, CI/CD (Bitrise, Fastlane), WCAG accessibility, App Store deployment.
+
+## Pages
+
+- [Portfolio](https://andre-emiliano.netlify.app/): projects, experience and skills.
+- [CV](https://andre-emiliano.netlify.app/cv.html): one-page curriculum vitae.
+
+## Contact
+
+- Email: andre.novais.emiliano@gmail.com
+- LinkedIn: https://www.linkedin.com/in/andremiliano/
+- GitHub: https://github.com/andremiliano
