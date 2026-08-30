@@ -150,12 +150,21 @@
     a { color: var(--accent); }
   }
 
+  /* On a phone this is read, not printed: point sizes tuned for A4 come out
+     around 11px, so scale the text up. Print rules are untouched. */
   @media screen and (max-width: 800px) {
     body { padding: 12px 8px; }
     .page { width: 100%; min-height: 0; padding: 22px 18px; }
     .entry-head { flex-direction: column; gap: 0; }
     .skills { grid-template-columns: minmax(0, 1fr); gap: 1pt 0; }
-    .skills dd { margin-bottom: 4pt; }
+    .skills dd { margin-bottom: 6pt; }
+    .summary, ul.points li { font-size: 14px; line-height: 1.55; }
+    .skills dt, .skills dd, .contact, .edu-note, .interests { font-size: 13.5px; }
+    .entry-title { font-size: 16px; }
+    .entry-org { font-size: 14.5px; }
+    .entry-date { font-size: 12.5px; }
+    .section-title { font-size: 12px; }
+    .contact { gap: 6px 14px; }
   }
 
   @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

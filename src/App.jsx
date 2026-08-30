@@ -100,10 +100,11 @@ const EDUCATION = [
   },
 ];
 
+// "Recently" means recently: the Rolls-Royce web work and the cross-platform
+// client apps. Older UIKit-era tooling lives in Skills and Experience instead.
 const STACK = [
-  'Swift', 'SwiftUI', 'UIKit', 'React Native', 'Expo', 'Vue', 'Nuxt', 'PrimeVue',
-  'TypeScript', 'Tailwind', 'PostgreSQL', 'Drizzle', 'Firebase', 'Supabase',
-  'Playwright', 'Bun', 'CI/CD',
+  'Nuxt', 'Vue', 'PrimeVue', 'TypeScript', 'Tailwind', 'PostgreSQL',
+  'Playwright', 'Bun', 'React Native', 'Expo', 'NativeWind',
 ];
 
 const SKILLS = [
@@ -293,7 +294,7 @@ const ThemeToggle = ({ onToggle }) => {
       transition={SPRING_QUICK}
       onClick={onToggle}
       aria-label={isDark ? 'Switch to light appearance' : 'Switch to dark appearance'}
-      className="flex h-8 w-8 items-center justify-center rounded-full text-secondary transition-colors hover:bg-primary/5 hover:text-primary"
+      className="flex h-11 w-11 items-center justify-center rounded-full text-secondary transition-colors hover:bg-primary/5 hover:text-primary"
     >
       {isDark ? <Sun size={17} strokeWidth={1.8} /> : <Moon size={17} strokeWidth={1.8} />}
     </motion.button>
@@ -372,7 +373,7 @@ function App() {
           <nav className="mx-auto flex h-[52px] max-w-5xl items-center justify-between px-5 sm:px-8" aria-label="Primary">
             <button
               onClick={() => scrollToId('home')}
-              className="text-[15px] font-semibold tracking-[-0.01em] transition-opacity hover:opacity-70"
+              className="-my-2 py-2 text-[15px] font-semibold tracking-[-0.01em] transition-opacity hover:opacity-70"
             >
               André Emiliano
             </button>
@@ -409,7 +410,7 @@ function App() {
                 onClick={() => setMenuOpen((v) => !v)}
                 aria-label={menuOpen ? 'Close menu' : 'Open menu'}
                 aria-expanded={menuOpen}
-                className="flex h-8 w-8 items-center justify-center rounded-full text-primary"
+                className="flex h-11 w-11 items-center justify-center rounded-full text-primary"
               >
                 {menuOpen ? <X size={20} strokeWidth={1.8} /> : <Menu size={20} strokeWidth={1.8} />}
               </button>
@@ -524,7 +525,7 @@ function App() {
               <PrimaryButton onClick={() => scrollToId('projects')}>View my work</PrimaryButton>
               <a
                 href={`mailto:${EMAIL}`}
-                className="link-arrow inline-flex items-center gap-1 text-[15px] text-accent transition-opacity hover:opacity-80"
+                className="link-arrow -my-2 inline-flex items-center gap-1 py-2 text-[15px] text-accent transition-opacity hover:opacity-80"
               >
                 Get in touch
                 <ChevronRight size={16} strokeWidth={2} />
@@ -535,7 +536,7 @@ function App() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ ...SPRING, delay: 0.25 }}
-              className="mt-10 flex items-center gap-5"
+              className="mt-10 -ml-3 flex items-center gap-1"
             >
               {[
                 { href: GITHUB_URL, label: 'GitHub', Icon: Github },
@@ -548,7 +549,7 @@ function App() {
                   href={href}
                   aria-label={label}
                   {...(href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                  className="text-tertiary transition-colors hover:text-primary"
+                  className="p-3 text-tertiary transition-colors hover:text-primary"
                 >
                   <Icon size={20} strokeWidth={1.7} />
                 </a>
@@ -696,7 +697,7 @@ function App() {
                             href={job.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="link-arrow type-body inline-flex items-center gap-1 text-accent transition-opacity hover:opacity-80"
+                            className="link-arrow -my-1.5 type-body inline-flex items-center gap-1 py-1.5 text-accent transition-opacity hover:opacity-80"
                           >
                             {job.company}
                             <ArrowUpRight size={15} strokeWidth={2} />
@@ -848,7 +849,7 @@ function App() {
                 </PrimaryButton>
                 <a
                   href={`mailto:${EMAIL}`}
-                  className="type-caption text-tertiary transition-colors hover:text-accent"
+                  className="type-caption -my-2 inline-block py-2 text-tertiary transition-colors hover:text-accent"
                 >
                   {EMAIL}
                 </a>
@@ -862,7 +863,7 @@ function App() {
               <p className="type-caption text-tertiary">
                 Designed &amp; Built by André Emiliano - © {new Date().getFullYear()}
               </p>
-              <div className="flex items-center gap-5">
+              <div className="-mr-3 flex items-center gap-1">
                 {[
                   { href: GITHUB_URL, label: 'GitHub', Icon: Github },
                   { href: LINKEDIN_URL, label: 'LinkedIn', Icon: Linkedin },
@@ -873,7 +874,7 @@ function App() {
                     href={href}
                     aria-label={label}
                     {...(href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                    className="text-tertiary transition-colors hover:text-primary"
+                    className="p-3 text-tertiary transition-colors hover:text-primary"
                   >
                     <Icon size={18} strokeWidth={1.7} />
                   </a>
