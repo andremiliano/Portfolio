@@ -12,6 +12,7 @@ import {
   Sun,
   Moon,
   Smartphone,
+  Watch,
   Globe,
   FileText,
   Database,
@@ -116,7 +117,7 @@ const SKILLS = [
   { icon: TerminalIcon, title: 'Practices', text: 'CI/CD (Bitrise, Fastlane, Jenkins), Agile, WCAG accessibility, App Store deployment' },
 ];
 
-// Seven shipped, professional projects. The university coursework was cut: it
+// Shipped projects, professional and personal. The university coursework was cut: it
 // diluted the work that matters, and none of those links actually opened for a
 // recruiter - the Coventry repos serve a login page and the Flask demo is a 404.
 const PROJECTS = [
@@ -127,6 +128,13 @@ const PROJECTS = [
     tech: ['React Native', 'Expo', 'LLMs', 'Prompt Engineering'],
     link: 'https://www.fryai.app',
     icon: Sparkles,
+  },
+  {
+    title: 'YTWatch - YouTube Music for Apple Watch',
+    desc: 'Open-source, fully native Apple Watch companion app for YouTube Music. Syncs playlists to the watch for standalone offline playback, with self-healing sync and a single reused AVPlayer to avoid watchOS memory crashes.',
+    tech: ['SwiftUI', 'watchOS', 'WatchConnectivity', 'Python'],
+    link: 'https://github.com/andremiliano/YTWatch-OpenSource',
+    icon: Watch,
   },
   {
     title: 'Met Office Weather',
